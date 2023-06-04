@@ -11,6 +11,7 @@ import AddExperience from './components/profile-forms/AddExperience';
 import AddEducation from './components/profile-forms/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
+import Posts from './components/posts/Posts';
 import PrivateRoute from './components/routing/PrivateRoute';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -90,6 +91,15 @@ const App = () => {
                 element={
                   <PrivateRoute>
                     <AddEducation />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                exact
+                path='/posts'
+                element={
+                  <PrivateRoute>
+                    <Posts />
                   </PrivateRoute>
                 }
               />
